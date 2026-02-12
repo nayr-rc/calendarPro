@@ -1,0 +1,30 @@
+services:
+  # 1. Frontend - SvelteKit
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5174:5174"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  # 2. Backend - ASP.NET Core
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017
+      - ASPNETCORE_URLS=http://+:5000
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+
+  # 3. Database - MongoDB
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    restart: unless-stopped

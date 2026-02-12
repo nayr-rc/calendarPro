@@ -1,0 +1,21 @@
+# Node.js / Frontend
+node_modules/
+dist/
+build/
+.svelte-kit/
+.env
+.DS_Store
+coverage/
+.npmrc
+
+# .NET / Backend
+bin/
+obj/
+*.user
+*.pdb
+*.suo
+.vs/
+appsettings.Development.json
+
+# Docker
+mongo_data/
