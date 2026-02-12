@@ -8,7 +8,7 @@
     let { onCreateClick }: Props = $props();
 
     const calendars = [
-        { name: "Lucas Speranza", color: "bg-blue-500", checked: true },
+        { name: "Personal", color: "bg-blue-500", checked: true },
         { name: "Birthdays", color: "bg-green-500", checked: true },
         { name: "Family", color: "bg-yellow-500", checked: true },
         { name: "Tasks", color: "bg-purple-500", checked: false },
